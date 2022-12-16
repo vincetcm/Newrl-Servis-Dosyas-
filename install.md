@@ -3,13 +3,7 @@
 <a href="https://discord.gg/gY2ksJ3u" target="_blank">Join Newrl Discord<img src="https://user-images.githubusercontent.com/50621007/176236430-53b0f4de-41ff-41f7-92a1-4233890a90c8.png" width="30"/></a>
 </p>
 
-<p style="font-size:14px" align="right">
-<a href="https://github.com/elangrr/testnet_manuals" target="_blank">More Guide Tutorials<img src="https://avatars.githubusercontent.com/u/34649601?v=4" width="30"/></a>
-</p>
 
-<p style="font-size:14px" align="right">
-<a href="https://indonode.dev/" target="_blank">Visit my website <img src="https://avatars.githubusercontent.com/u/34649601?v=4" width="30"/></a>
-</p>
 
 <p align="center">
   <img height="150" height="auto" src="https://newrl.net/img/newrl_logo.png">
@@ -27,16 +21,10 @@ sudo su
 ```
 ```
 sudo ufw allow ssh 
-sudo ufw allow 8421
+sudo ufw allow 8456
 ```
-NOTE : I choose 8421 because we run Testnet, if you wanna run Devnet / Mainnet use another port
 
-`devnet:8420`
 
-`testnet:8421`
-
-`mainnet:8426`
-Or you can just open all the ports
 
 
 ### Packages
@@ -75,7 +63,7 @@ source newrl-venv/bin/activate
 ```
 git clone https://github.com/newrlfoundation/newrl.git
 cd newrl
-scripts/install.sh testnet
+scripts/install.sh mainnet
 ```
 
 ### Create wallet
@@ -96,7 +84,7 @@ Save it somewhere safe!!!
 ### Start Node
 ```
 screen -S newrl
-scripts/start.sh testnet
+scripts/start.sh mainnet
 ```
 
 To detach from the screen simply press `CTRL+A+D`
@@ -111,25 +99,7 @@ To restore screen simply run `screen -r <sessionid>`
 - Click on `Run a Node` button on Newrl wallet website and Stake 500k NWRL
 ![image](https://user-images.githubusercontent.com/34649601/193604862-dff6588b-48e0-4287-8090-d296c5801d42.png)
 
-- After transaction is complete you can check your transaction here `http://archive1-testnet1.newrl.net:8421/sc-state?table_name=stake_ledger&contract_address=ct1111111111111111111111111111111111111115&unique_column=wallet_address&unique_value=<ADDRESS>`
- 
-Change `<ADDRESS>` to your wallet address
 
-You will get an output
-```
-{
-    "status": "SUCCESS",
-    "data": [
-        "ct1111111111111111111111111111111111111115",
-        "piaebd403e1864223c07413075054c1936d6ad17dd",
-        "0xa9ce833fa8deaf8e7f21f493335beff4386c5c22",
-        800000000000,
-        1664279562000,
-        "[{\"0xa9ce833fa8deaf8e7f21f493335beff4386c5c22\": 100000000000}, {\"0xce4b9b89efa5ee6c34655c8198c09494dc3d95bb\": 700000000000}]"
-    ]
-}
-```
-Here, fourth parameter of data list "800000000000" is the amount of tokens staked.
 
 Then everything is done ! 
 
