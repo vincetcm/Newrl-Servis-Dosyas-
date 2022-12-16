@@ -79,7 +79,7 @@ Save it somewhere safe!!!
 
 - Go to [Newrl Wallet](https://wallet.newrl.net/) and add phrase then click import
 - Copy `{"public": "a9daa99fa288243adb8a3063c0f51261acf75b7a4178c25ede8226xxxxxxxxxxxxxxx", "private": "67095c002fc038xxxxxxxxxxxxxxxxxxxxxxxxxxx", "address": "0x5e7df94d2c134bfd5xxxxxxxxxxxxxxxx"}` to import your wallet then ask for faucet
-- Go to [Newrl Faucet](https://wallet.newrl.net/faucet/) and ask for faucet
+
 
 ### Start Node
 ```
